@@ -7,7 +7,7 @@ To get started:
 3. `npm i` - will install all necessary Grunt toys
 4. `bower update` - install all 3rd party libraries (important for CSS generation w/ Sass). Normalize is included by default
 5. `grunt prep` - prepares a custom Modernizr build. Need only be run once at start of project, or whenever a new Modernizr test is required.
-6. `grunt` - This will run in development mode, i.e. css mapping, expanded output of css. Hopefully Grunt will compile the `build/assets/main.css` file and '**Done, without 
+6. `grunt` - This will run in development mode, i.e. css mapping, expanded output of css. Hopefully Grunt will compile the `build/assets/main.css` file and "*Done, without errors*" 
 
 
 ## Updating when new 3rd party tools/packages have been added
