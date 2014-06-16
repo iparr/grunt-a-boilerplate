@@ -10,7 +10,7 @@ To get started:
 6. `grunt` - This will run in development mode, i.e. css mapping, expanded output of css. Hopefully Grunt will compile the `build/assets/main.css` file and '**Done, without 
 
 
-# Updating when new 3rd party tools/packages have been added
+## Updating when new 3rd party tools/packages have been added
 
 Things looking a bit odd? Try this:
 
@@ -18,3 +18,10 @@ Things looking a bit odd? Try this:
 2. `bower update` - this will look for any new 3rd party libraries
 3. `grunt prep` - Maybe the website is now dependant on additional Modernizr tests? Lets regenerate Modernizr just in case.
 4. `grunt` - Re-running this will regenerate your JS and CSS, hopefully with all the new toys included
+
+## Swapping to grunt-contrib-sass
+
+The default Sass generator included is wicked fast but may be problematic. In these cases the old one can be reverted to by:
+
+1. Edit `grunt/sass.js` and swap `style` / `outputStyle`, `sourcemap` / `sourceMap` and `grunt.loadNpmTasks` lines.
+2. Re-run as usual.
