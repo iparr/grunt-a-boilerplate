@@ -13,6 +13,7 @@
     "grunt-newer": "~0.7.0",
     "grunt-autoprefixer": "~0.7.5",
     "grunt-contrib-uglify": "~0.5.0",
-    "grunt-sass": "~0.13.1"
+    "grunt-sass": "~0.13.1",
+    "assemble": "~0.4.39"
   }
 }

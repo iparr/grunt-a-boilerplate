@@ -23,6 +23,12 @@ module.exports = function(grunt) {
 			options: {
 				message: 'Everything rebuilt'
 			}
+		},
+		assemble: {
+			options: {
+				title: 'Grunt: Assemble',
+				message: 'Assemble.io build successful'
+			}
 		}
 	});
 

@@ -43,6 +43,13 @@ module.exports = function(grunt) {
 		'notify:modernizr'
 	]);
 
+	grunt.registerTask('generate', 'Assemble.io some static pages', [
+		'assemble',
+		'sass:dev',
+		'concat',
+		'notify:assemble'
+	]);
+
 	grunt.registerTask('build', 'Force everything to regenerate', [
 		'sass:dev',
 		'sass:dist',
@@ -50,6 +57,7 @@ module.exports = function(grunt) {
 		'concat',
 		'uglify',
 		'modernizr',
+		'assemble',
 		'notify:rebuild'
 	]);
 

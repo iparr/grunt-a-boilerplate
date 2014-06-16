@@ -1,0 +1,19 @@
+---
+layout: layout.hbs
+---
+
+<h2>Res pages</h2>
+<ul >
+  {{#each pages }}
+    {{#is data.section  "development" }}
+      <li > <a  href ="{{relativeLink}}" >Title: {{data.title }} </a > </li >
+    {{/is }}
+  {{/each  }}
+</ul >
+
+<h2>All pages</h2>
+<ul >
+  {{#each pages}}
+    <li><a href ="{{relativeLink}}">{{default data.title basename}}</a></li>
+  {{/each}}
+</ul >
