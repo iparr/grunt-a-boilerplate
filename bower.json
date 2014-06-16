@@ -1,0 +1,19 @@
+{
+  "name": "Grunt a Boilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "Ian Parr <ian@devolute.net>"
+  ],
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "~3.0.1",
+    "modernizr": "~2.8.2"
+  }
+}

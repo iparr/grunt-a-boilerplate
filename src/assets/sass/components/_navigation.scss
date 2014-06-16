@@ -1,0 +1,40 @@
+/**
+ *	Navigation
+ **/
+
+/* Global nav */
+.global-navigation {
+
+	ul {
+		margin: 0 -10px;
+		padding: 50px 15px;
+		position: relative;
+	}
+		li {
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+			a {
+				display: inline-block;
+				padding: 0 15px;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+				li:first-child a { // This approach allows for the adding of more menu items
+					border-left: none;
+				}
+
+	@media screen and (max-width: $step-down-1) {
+		ul {
+			margin: 0 auto;
+			padding: 30px 0;
+			text-align: center;
+			max-width: 200px;
+		}
+	}
+}

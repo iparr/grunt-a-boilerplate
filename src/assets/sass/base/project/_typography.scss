@@ -1,0 +1,25 @@
+/*
+ *	Typography
+ */
+
+body {
+	// font-family: Verdana, sans-serif;
+	font-family: 'Futura-Boo', sans-serif;
+	font-size: $base-font-size;
+	line-height: 1.4;
+}
+
+/*
+ *	Headings
+ */
+
+h1 {
+	@include font-size(30);
+
+	margin: 0 0 1em 0;
+}
+h2 {
+	@include font-size(26);
+
+	font-weight: normal;
+}

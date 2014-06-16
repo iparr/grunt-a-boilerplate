@@ -1,0 +1,37 @@
+/*
+ *	Buttons
+ */
+
+.button {
+	border: none;
+	border-radius: $master-radius;
+	color: #fff;
+	display: inline-block;
+	font-weight: normal;
+	margin-bottom: $master-padding;
+	padding: 8px 18px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	input {
+		background: none;
+		border: none;
+		display: block;
+		padding: 0;
+		width: 100%;
+	}
+}
+	// white
+	.button--inv {
+		background: #fff;
+	}
+	// double width
+	.button--double {
+		padding-left: (18px *2);
+		padding-right: (18px *2);
+	}
+	.button--block {
+		display: block;
+		text-align: center;
+	}

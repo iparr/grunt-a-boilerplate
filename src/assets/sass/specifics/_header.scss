@@ -1,0 +1,65 @@
+/*
+*	Header
+*	Contains everything in the global header. Navigation-specific elements found in _navigation
+*/
+
+.global-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 100%;
+	z-index: 10;
+
+	
+
+	@media screen and (max-width: $step-down-1) {
+		position: relative;
+		&::after {
+			border-radius: 100%;
+			bottom: 0;
+			// box-shadow: 0 0 40px rgba(0,0,0,0.8);
+			content: "";
+			height: 40px;
+			left: 10%;
+			position: absolute;
+			right: 10%;
+			width: 80%;
+			z-index:-1;
+		}
+	}
+}
+
+/* Logo */
+.global-logo {
+	position: absolute;
+	left: 50%;
+	margin: 0 0 0 -50px; // half of logo width
+	top: 10px;
+	z-index: 30;
+
+	a {
+		display: block;
+	}
+		img { // We should really have an SVG provided here, please
+			height: 100px;
+			width: 100px;
+		}
+}
+	.global-logo__text {
+		display: block;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		position: absolute;
+		width: 0;
+		z-index: -1;
+	}
+
+	@media screen and (max-width: $step-down-1) {
+		.global-logo {
+			left: 0;
+			position: relative;
+			margin: 10px auto;
+			width: 100px;
+		}
+	}
