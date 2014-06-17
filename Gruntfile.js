@@ -55,8 +55,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('build', 'Force everything to regenerate', [
-		'sass:dev',
-		'sass:dist',
+		'sass',
 		'autoprefixer',
 		'concat',
 		'uglify',
