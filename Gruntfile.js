@@ -4,6 +4,10 @@
  *	http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
  *	…and also Cowboy:
  *	https://github.com/cowboy/wesbos/commit/5a2980a7818957cbaeedcd7552af9ce54e05e3fb
+ *	NPM Packages to be kept up to date with: `npm-check-updates -u`
+ *    (after installing `npm install npm-check-updates -g` first)
+ *	Thanks to @MrMartineau for that tip:
+ *	http://martineau.tv/blog/2013/12/more-efficient-grunt-workflows/
  *	Author: @devolute / github: ianp
  */
 
@@ -43,6 +47,13 @@ module.exports = function(grunt) {
 		'notify:modernizr'
 	]);
 
+	grunt.registerTask('generate', 'Assemble.io some static pages', [
+		'assemble',
+		'sass:dev',
+		'concat',
+		'notify:assemble'
+	]);
+
 	grunt.registerTask('build', 'Force everything to regenerate', [
 		'sass:dev',
 		'sass:dist',
@@ -50,6 +61,7 @@ module.exports = function(grunt) {
 		'concat',
 		'uglify',
 		'modernizr',
+		'assemble',
 		'notify:rebuild'
 	]);
 
