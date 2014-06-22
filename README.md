@@ -25,5 +25,5 @@ Things looking a bit odd? Try this:
 
 ~~The default Sass generator included is slower than the Node-js version. Unfortunately although this can be used, it may be problematic and gives poor error reporting. Regardless, it can be used by:~~
 
-1. ~Edit `grunt/sass.js` and swap `style` / `outputStyle`, `sourcemap` / `sourceMap` and `grunt.loadNpmTasks` lines.~ Change the line `sass_build_engine` to 'node'.
-2. ~Re-run as usual~ Run with `grunt nodesass`.
+1. ~~Edit `grunt/sass.js` and swap `style` / `outputStyle`, `sourcemap` / `sourceMap` and `grunt.loadNpmTasks` lines.~~ Change the line `sass_build_engine` to 'node'.
+2. ~~Re-run as usual~~ Run with `grunt nodesass`.
