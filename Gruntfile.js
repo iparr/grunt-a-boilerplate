@@ -37,17 +37,17 @@ module.exports = function(grunt) {
 
 	// Default task(s)
 	grunt.registerTask('default', 'Watch and rebuild assets', [
-		'newer:sass:ruby:dev',
+		'newer:sass:dev',
 		'newer:concat',
 		'watch'
 		// notify called by watch task
 	]);
-
+	
 	// Running watch with Node-driven Sass build
 	grunt.registerTask('nodesass', 'Watch and rebuild assets', [
-		'newer:sass:node:dev',
+		'newer:sass:devnode',
 		'newer:concat',
-		'watch'
+		'watch' // I'm not smart enough to get this working for watch, yet
 	]);
 
 	grunt.registerTask('prep', 'Generate custom Modernizr', [
