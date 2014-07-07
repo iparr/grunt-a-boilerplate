@@ -1,6 +1,10 @@
 {
   "name": "grunt-a-boilerplate",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iparr/grunt-a-boilerplate"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.4.0",

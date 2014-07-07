@@ -4,6 +4,10 @@
  *	http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
  *	…and also Cowboy:
  *	https://github.com/cowboy/wesbos/commit/5a2980a7818957cbaeedcd7552af9ce54e05e3fb
+ *	NPM Packages to be kept up to date with: `npm-check-updates -u`
+ *    (after installing `npm install npm-check-updates -g` first)
+ *	Thanks to @MrMartineau for that tip:
+ *	http://martineau.tv/blog/2013/12/more-efficient-grunt-workflows/
  *	Author: @devolute / github: ianp
  */
 
@@ -21,7 +25,8 @@ module.exports = function(grunt) {
 			dest: 'build',
 			css_build_folder: '/assets/css/',
 			js_build_folder: '/assets/js/'
-		}
+		},
+		sass_build_engine: 'node' // supports 'ruby' or 'node'
 	});
 
 	// Load config-less tasks
@@ -38,6 +43,13 @@ module.exports = function(grunt) {
 		// notify called by watch task
 	]);
 
+	// Running watch with Node-driven Sass build
+	grunt.registerTask('nodesass', 'Watch and rebuild assets', [
+		'newer:sass:devnode',
+		'newer:concat',
+		'watch' // I'm not smart enough to get this working for watch, yet
+	]);
+
 	grunt.registerTask('prep', 'Generate custom Modernizr', [
 		'modernizr',
 		'notify:modernizr'
@@ -52,7 +64,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', 'Force everything to regenerate', [
 		'sass:dev',
-		'sass:dist',
 		'autoprefixer',
 		'concat',
 		'uglify',
