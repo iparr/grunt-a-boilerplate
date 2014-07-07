@@ -62,8 +62,9 @@ module.exports = function(grunt) {
 		'notify:assemble'
 	]);
 
-	grunt.registerTask('build', 'Force everything to regenerate', [
+	grunt.registerTask('build', 'Force EVERYTHING to regenerate', [
 		'sass:dev',
+		'sass:dist',
 		'autoprefixer',
 		'concat',
 		'uglify',
