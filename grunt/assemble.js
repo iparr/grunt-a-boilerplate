@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 			layoutdir: '<%= dirs.src %>/layouts/',
 			partials: ['<%= dirs.src %>/partials/**/*.hbs'],
 			production: false,
+			assets: '<%= dirs.dest %>/assets',
 
 			 // Metadata
 			pkg: '<%= pkg %>',
