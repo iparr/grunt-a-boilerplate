@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 		pages: {
 			expand: true, // necessary for cwd
 			cwd: '<%= dirs.src %>',
-			src: ['***.md', '***.hbs', '!partials/**', '!layouts/**', '!residential-developments/***'],
+			src: ['**/*.md', '**/*.hbs', '!partials/**', '!layouts/**', '!residential-developments/***'],
 			dest: '<%= dirs.dest %>',
 			options: {
 				// ext: '.php'
