@@ -30,22 +30,22 @@ module.exports = function(grunt) {
 	});
 
 	// Load config-less tasks
-	grunt.loadNpmTasks('grunt-newer');
+	// grunt.loadNpmTasks('');
 
 	// Load per-task config from separate files.
 	grunt.loadTasks('grunt');
 
 	// Default task(s)
 	grunt.registerTask('default', 'Watch and rebuild assets', [
-		'newer:sass:dev',
+		'sass:dev',
 		'newer:concat',
 		'watch'
 		// notify called by watch task
 	]);
-	
+
 	// Running watch with Node-driven Sass build
 	grunt.registerTask('nodesass', 'Watch and rebuild assets', [
-		'newer:sass:devnode',
+		'sass:devnode',
 		'newer:concat',
 		'watch' // I'm not smart enough to get this working for watch, yet
 	]);
