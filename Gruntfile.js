@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 	});
 
 	// Load config-less tasks
-	// grunt.loadNpmTasks('');
+	grunt.loadNpmTasks('grunt-newer');
 
 	// Load per-task config from separate files.
 	grunt.loadTasks('grunt');
