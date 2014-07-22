@@ -25,8 +25,7 @@ module.exports = function(grunt) {
 			dest: 'build',
 			css_build_folder: '/assets/css/',
 			js_build_folder: '/assets/js/'
-		},
-		sass_build_engine: 'node' // supports 'ruby' or 'node'
+		}
 	});
 
 	// Load config-less tasks
