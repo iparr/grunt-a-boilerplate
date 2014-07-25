@@ -1,5 +1,9 @@
 /*
  *	Mixins
+ *
+ *	ToC:
+ *		font-size
+ *		clearfix
  */
 
 /*
@@ -27,4 +31,18 @@
 @mixin font-size( $font-size ) {
 	font-size: $font-size * 1px;
 	font-size: $font-size/10 * 1rem;
+}
+
+/*
+ *	Clearfix
+ */
+
+@mixin clearfix() {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
 }
