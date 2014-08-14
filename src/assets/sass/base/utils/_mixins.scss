@@ -3,11 +3,10 @@
  *
  *	ToC:
  *		font-size
- *		clearfix
  */
 
 /*
- *	Fonts
+ *	font-size
  *
 
 	Font size REM maker
@@ -31,18 +30,4 @@
 @mixin font-size( $font-size ) {
 	font-size: $font-size * 1px;
 	font-size: $font-size/10 * 1rem;
-}
-
-/*
- *	Clearfix
- */
-
-@mixin clearfix() {
-	&:before, &:after {
-		content: "";
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
 }
