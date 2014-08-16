@@ -4,10 +4,12 @@
 *
 *	ToC:
 *		clearfix
+*		Text overflow
+*		List reset
 */
 
 /*
- *	clearfix
+ *	Clearfix
  */
 
 %clearfix {
@@ -18,4 +20,29 @@
 	&:after {
 		clear: both;
 	}
+}
+
+
+/*
+ *	Text overflow
+ *	An easy way to truncate text with an ellipsis. Requires the element to be block or inline-block.
+ *	/via http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+ */
+
+%text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+/*
+ *	List reset
+ *	The common task of zeroing out a list
+ */
+
+%list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
