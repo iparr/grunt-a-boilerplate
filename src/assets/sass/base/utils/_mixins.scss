@@ -101,7 +101,7 @@
 
 	e.g:
 
-		<h2 class="this-thing">A heading</h2>
+		<h2 class="this-thing"><span>A heading</span></h2>
 
 	use:
 
@@ -118,4 +118,9 @@
 	padding: $padding;
 	padding-left: 0;
 	padding-right: 0;
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
 }
