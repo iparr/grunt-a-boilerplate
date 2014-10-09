@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 				style: 'compressed', // grunt-contrib-sass (Ruby)
 			},
 			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.min.css': '<%= dirs.src %>/assets/sass/main.scss'
+				'<%= dirs.dest %><%= dirs.css_build_folder %>main.min.css': '<%= dirs.src %>/assets/scss/main.scss'
 			}
 		},
 		dev: {
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 				sourcemap: true, // grunt-contrib-sass (Ruby)
 			},
 			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.css': '<%= dirs.src %>/assets/sass/main.scss'
+				'<%= dirs.dest %><%= dirs.css_build_folder %>main.css': '<%= dirs.src %>/assets/scss/main.scss'
 			}
 		},
 		distnode: {
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 				outputStyle: 'compressed' // grunt-sass (node)
 			},
 			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.min.css': '<%= dirs.src %>/assets/sass/main.scss'
+				'<%= dirs.dest %><%= dirs.css_build_folder %>main.min.css': '<%= dirs.src %>/assets/scss/main.scss'
 			}
 		},
 		devnode: {
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 				sourceMap: true // grunt-sass (Node)
 			},
 			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.css': '<%= dirs.src %>/assets/sass/main.scss'
+				'<%= dirs.dest %><%= dirs.css_build_folder %>main.css': '<%= dirs.src %>/assets/scss/main.scss'
 			}
 		}
 	});

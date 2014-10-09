@@ -25,8 +25,7 @@ module.exports = function(grunt) {
 			dest: 'build',
 			css_build_folder: '/assets/css/',
 			js_build_folder: '/assets/js/'
-		},
-		sass_build_engine: 'node' // supports 'ruby' or 'node'
+		}
 	});
 
 	// Load config-less tasks
@@ -37,7 +36,7 @@ module.exports = function(grunt) {
 
 	// Default task(s)
 	grunt.registerTask('default', 'Watch and rebuild assets', [
-		'newer:sass:dev',
+		'sass:dev',
 		'newer:concat',
 		'watch'
 		// notify called by watch task
@@ -45,7 +44,7 @@ module.exports = function(grunt) {
 
 	// Running watch with Node-driven Sass build
 	grunt.registerTask('nodesass', 'Watch and rebuild assets', [
-		'newer:sass:devnode',
+		'sass:devnode',
 		'newer:concat',
 		'watch' // I'm not smart enough to get this working for watch, yet
 	]);
