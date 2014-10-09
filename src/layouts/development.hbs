@@ -94,17 +94,43 @@ layout: layout.hbs
 </div>
 <h1>RESIDENTIAL TPL</h1>
 <h2>Res pages</h2>
-<ul >
+<ul>
 {{#each pages }}
 	{{#is data.section  "development" }}
-		<li > <a  href ="{{relativeLink}}" >Title: {{data.title }} </a > </li >
+		<li>
+			<a  href ="{{relativeLink}}" >Title: {{data.title }} </a>
+		</li>
 	{{/is }}
 {{/each  }}
 </ul >
 
 <h2>All pages</h2>
-<ul >
+<ul>
   {{#each pages}}
-	<li><a href ="{{relativeLink}}">{{default data.title basename}}</a></li>
+	<li>
+		<a href ="{{relativeLink}}">{{default data.title basename}}</a>
+	</li>
   {{/each}}
-</ul >
+</ul>
+
+<ul>
+	{{#each slides }}
+		<li>
+			<a href="{{this.url}}">
+				<h2>{{this.title}}</h2>
+				{{#if big}}<span>This is 'big'</span>{{/if}}
+			</a>
+			{{#if children}}
+				<ul>
+					{{#each children }}
+						<li>
+							<a href="{{this.url}}">
+								{{this.title}}
+							</a>
+						</li>
+					{{/each }}
+				</ul>
+			{{/if}}
+		</li>
+	{{/each }}
+</ul>
