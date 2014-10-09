@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 			partials: ['<%= dirs.src %>/partials/**/*.hbs'],
 			production: false,
 			assets: '<%= dirs.dest %>/assets',
-			data: '<%= dirs.src %>/data/*.json',
+			data: ['<%= dirs.src %>/data/*.json','<%= dirs.src %>/data/*.yml'],
 
 			 // Metadata
 			pkg: '<%= pkg %>',
