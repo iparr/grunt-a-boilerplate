@@ -4,35 +4,20 @@ module.exports = function(grunt) {
 		dist: {
 			options: {
 				style: 'compressed', // grunt-contrib-sass (Ruby)
+				// outputStyle: 'compressed', // grunt-sass (node)
+				sourcemap: 'none'
 			},
 			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.min.css': '<%= dirs.src %>/assets/sass/main.scss'
+				'<%= dirs.dest %><%= dirs.css_build_folder %>main.min.css': '<%= dirs.src %>/assets/scss/main.scss'
 			}
 		},
 		dev: {
 			options: {
-				style: 'expanded',
-				sourcemap: true, // grunt-contrib-sass (Ruby)
+				style: 'expanded'
+				// sourceMap: true // grunt-sass (Node)
 			},
 			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.css': '<%= dirs.src %>/assets/sass/main.scss'
-			}
-		},
-		distnode: {
-			options: {
-				outputStyle: 'compressed' // grunt-sass (node)
-			},
-			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.min.css': '<%= dirs.src %>/assets/sass/main.scss'
-			}
-		},
-		devnode: {
-			options: {
-				style: 'expanded',
-				sourceMap: true // grunt-sass (Node)
-			},
-			files: {
-				'<%= dirs.dest %><%= dirs.css_build_folder %>main.css': '<%= dirs.src %>/assets/sass/main.scss'
+				'<%= dirs.dest %><%= dirs.css_build_folder %>main.css': '<%= dirs.src %>/assets/scss/main.scss'
 			}
 		}
 	});
