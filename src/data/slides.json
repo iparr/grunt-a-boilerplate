@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Slide 1",
+		"img": "test-01.jpg",
+		"url": "http://google.com",
+		"big": true,
+		"children": [
+			{
+				"title": "Slide 1 child",
+				"img": "test-child.jpg"
+			}
+		]
+    },
+    {
+        "title": "Slide 2",
+		"img": "test-02.jpg",
+		"big": false
+    }
+]

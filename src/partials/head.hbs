@@ -6,13 +6,29 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{default title page.basename}} | {{site.brand}}</title>
+	<title>{{default title page.basename}} | {{global.brand}}</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- webmaster tools verification -->
-    <meta name="google-site-verification" content="" />
-
 	<link rel="stylesheet" href="{{assets}}/css/main.min.css">
 	<script src="{{assets}}/js/vendor/modernizr-custom.js"></script>
+
+	<!-- webmaster tools verification -->
+	<meta name="google-site-verification" content="" />
 </head>
+<header class="global-header" role="banner">
+
+	<h1 class="global-logo">
+		{{#isnt dirname "build" }}
+			<a href="/">
+		{{/isnt}}
+			<img src="<%= images_dir %>/logo.svg" alt="{{ global.brand }} logo">
+			<span class="global-logo__text">{{ global.brand }}</span>
+		{{#isnt basename "build" }}
+			</a>
+		{{/isnt}}
+	</h1>
+
+	{{> navigation-primary }}
+
+</header>
