@@ -42,13 +42,6 @@ module.exports = function(grunt) {
 		// notify called by watch task
 	]);
 
-	// Running watch with Node-driven Sass build
-	grunt.registerTask('nodesass', 'Watch and rebuild assets', [
-		'sass:devnode',
-		'newer:concat',
-		'watch' // I'm not smart enough to get this working for watch, yet
-	]);
-
 	grunt.registerTask('prep', 'Generate custom Modernizr', [
 		'modernizr',
 		'notify:modernizr'
