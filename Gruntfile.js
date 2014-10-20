@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 		// Global configuration variables
 		dirs: {
 			src: 'src',
-			dest: 'build',
+			dest: 'htdocs/wp-content/themes/themename',
 			css_build_folder: '/assets/css/',
 			js_build_folder: '/assets/js/'
 		}

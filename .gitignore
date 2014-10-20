@@ -1,6 +1,51 @@
-.sass-cache
+# This is a template .gitignore file for git-managed WordPress projects.
+# via this log: https://gist.github.com/redoPop/444295
+# Fact: you don't want WordPress core files, or your server-specific
+# configuration files etc., in your project's repository. You just don't.
+#
+# Solution: stick this file up your repository root (which it assumes is
+# also the WordPress root directory) and add exceptions for any plugins,
+# themes, and other directories that should be under version control.
+#
+# See the comments below for more info on how to add exceptions for your
+# content. Or see git's documentation for more info on .gitignore files:
+# http://kernel.org/pub/software/scm/git/docs/gitignore.html
+
+# Ignore everything in the root except the "wp-content" directory.
+htdocs/*
+!htdocs/wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+htdocs/wp-content/*
+!htdocs/wp-content/plugins/
+!htdocs/wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+html/wp-content/plugins/*
+# !html/wp-content/plugins/my-single-file-plugin.php
+# !html/wp-content/plugins/my-directory-plugin/
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+html/wp-content/themes/*
+!html/wp-content/themes/themename/
+
+# Assets - generated or package-managed
+bower_components/
+node_modules/
+htdocs/wp-content/themes/themename/assets/
+
+# Static build/prototype
+static/
+
+# Sass
+.sass-cache/
 *.css.map
-build/*
-node_modules
-bower_components
+
+# favicon
+!favicon.ico
+
+# crap
 .DS_Store

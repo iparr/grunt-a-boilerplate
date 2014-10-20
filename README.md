@@ -1,6 +1,22 @@
 # Grunt-a-boilerplate
 
-To get started:
+**branch**: `wordpress-kit`
+
+The intention of this branch is to provide a base for the development of front-end assets for *WordPress* themes.
+
+This is not a starter theme, use [*underscores*](https://github.com/automattic/_s) for that. Unless they've turned it into a Sass framework of course.
+
+
+## Setting up for your WordPress theme
+
+* Change the name of the `themename` directory in `html/wp-content/themes/` to the name of your theme
+* Edit `.gitignore` and change all references to this as well
+* Edit the path in `dirs:dest`
+
+Your FE assets should now be compiled in the 'right' place.
+
+
+## Getting started
 
 1. Have Grunt, npm, Sass (3.3+)
 2. `git clone` this repo
@@ -18,12 +34,3 @@ Things looking a bit odd? Try this:
 2. `bower update` - this will look for any new 3rd party libraries
 3. `grunt prep` - Maybe the website is now dependant on additional Modernizr tests? Lets regenerate Modernizr just in case.
 4. `grunt` - Re-running this will regenerate your JS and CSS, hopefully with all the new toys included
-
-## Swapping to grunt-contrib-sass
-
-*This function is currently wack. WIP*
-
-~~The default Sass generator included is slower than the Node-js version. Unfortunately although this can be used, it may be problematic and gives poor error reporting. Regardless, it can be used by:~~
-
-1. ~~Edit `grunt/sass.js` and swap `style` / `outputStyle`, `sourcemap` / `sourceMap` and `grunt.loadNpmTasks` lines.~~ Change the line `sass_build_engine` to 'node'.
-2. ~~Re-run as usual~~ Run with `grunt nodesass`.
