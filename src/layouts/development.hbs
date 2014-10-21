@@ -1,0 +1,136 @@
+---
+layout: layout.hbs
+---
+
+<div id="content">
+
+
+
+	<div style="display: none">
+
+		<ul>
+		{{#each pages}}
+		<li><a href="{{relativeLink}}">{{filename}}</a></li>
+		{{/each}}
+		</ul>
+
+		<h1>Page</h1>
+		<!--
+		"this"
+		===============================
+		this.src:      {{this.src}}
+		this.dest:     {{this.dest}}
+		this.layout:   {{this.layout}}
+		this.dirname:  {{this.dirname}}
+		this.filename: {{this.filename}}
+		this.pagename: {{this.pagename}}
+		this.basename: {{this.basename}}
+		this.ext:      {{this.ext}}
+
+		"page"
+		===============================
+		page.src:        {{page.src}}
+		page.dest:       {{page.dest}}
+		page.layout:     {{page.layout}}
+		page.dirname:    {{page.dirname}}
+		page.filename:   {{page.filename}}
+		page.pagename:   {{page.pagename}}
+		page.basename:   {{page.basename}}
+		page.ext:        {{page.ext}}
+
+		"root"
+		===============================
+		src:           {{src}}
+		dest:          {{dest}}
+		layout:        {{layout}}
+		dirname:       {{dirname}}
+		filename:      {{filename}}
+		pagename:      {{pagename}}
+		basename:      {{basename}}
+		ext:           {{ext}}
+		-->
+		<h1>Each pages</h1>
+		<ul>
+		{{#each pages}}<li><a href="{{relativeLink}}">{{filename}}</a></li>
+		  <!--
+		  "this"
+		  ===============================
+		  this.src:      {{this.src}}
+		  this.dest:     {{this.dest}}
+		  this.dirname:  {{this.dirname}}
+		  this.filename: {{this.filename}}
+		  this.pagename: {{this.pagename}}
+		  this.basename: {{this.basename}}
+		  this.ext:      {{this.ext}}
+
+		  "page"
+		  ===============================
+		  page.src:      {{../page.src}}
+		  page.dest:     {{../page.dest}}
+		  page.dirname:  {{../page.dirname}}
+		  page.filename: {{../page.filename}}
+		  page.pagename: {{../page.pagename}}
+		  page.basename: {{../page.basename}}
+		  page.ext:      {{../page.ext}}
+
+		  "root"
+		  ===============================
+		  src:           {{src}}
+		  dest:          {{dest}}
+		  dirname:       {{dirname}}
+		  filename:      {{filename}}
+		  pagename:      {{pagename}}
+		  basename:      {{basename}}
+		  ext:           {{ext}}
+		  -->
+		{{/each}}
+	  </ul>
+
+		<h1>Debug Info</h1>
+		{{{inspect page 'json'}}}
+
+	</div><!-- end hidden debug -->
+
+</div>
+<h1>RESIDENTIAL TPL</h1>
+<h2>Res pages</h2>
+<ul>
+{{#each pages }}
+	{{#is data.section  "development" }}
+		<li>
+			<a  href ="{{relativeLink}}" >Title: {{data.title }} </a>
+		</li>
+	{{/is }}
+{{/each  }}
+</ul >
+
+<h2>All pages</h2>
+<ul>
+  {{#each pages}}
+	<li>
+		<a href ="{{relativeLink}}">{{default data.title basename}}</a>
+	</li>
+  {{/each}}
+</ul>
+
+<ul>
+	{{#each slides }}
+		<li>
+			<a href="{{this.url}}">
+				<h2>{{this.title}}</h2>
+				{{#if big}}<span>This is 'big'</span>{{/if}}
+			</a>
+			{{#if children}}
+				<ul>
+					{{#each children }}
+						<li>
+							<a href="{{this.url}}">
+								{{this.title}}
+							</a>
+						</li>
+					{{/each }}
+				</ul>
+			{{/if}}
+		</li>
+	{{/each }}
+</ul>
