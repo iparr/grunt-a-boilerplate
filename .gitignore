@@ -24,13 +24,13 @@ htdocs/wp-content/*
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
 html/wp-content/plugins/*
-# !html/wp-content/plugins/my-single-file-plugin.php
-# !html/wp-content/plugins/my-directory-plugin/
+# !htdocs/wp-content/plugins/my-single-file-plugin.php
+# !htdocs/wp-content/plugins/my-directory-plugin/
 
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
-html/wp-content/themes/*
-!html/wp-content/themes/themename/
+htdocs/wp-content/themes/*
+!htdocs/wp-content/themes/themename/
 
 # Assets - generated or package-managed
 bower_components/
